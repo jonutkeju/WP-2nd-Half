@@ -5,7 +5,12 @@ export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      '/products': 'http://localhost:3000',
+      '/products': {
+        target: 'http://localhost:3000',
+        bypass: (request) => {
+          if (request.headers.accept?.includes('text/html')) return request.url;
+        },
+      },
     },
   },
 });
