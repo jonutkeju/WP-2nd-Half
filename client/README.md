@@ -1,6 +1,6 @@
 # Antarmuka Manajemen Produk
 
-Antarmuka React ini menggunakan REST API Express yang berada di repository yang sama.
+Antarmuka React, TypeScript, Vite, React Router, dan Tailwind CSS ini menggunakan REST API Express yang berada di repository yang sama.
 
 ## Menjalankan aplikasi
 
@@ -20,4 +20,4 @@ Antarmuka React ini menggunakan REST API Express yang berada di repository yang 
 
 4. Buka URL yang ditampilkan Vite (umumnya `http://localhost:5173`). Vite meneruskan request `/products` ke API pada `http://localhost:3000`.
 
-Antarmuka menyediakan daftar produk, pencarian nama, penambahan, pengubahan, dan penghapusan dengan konfirmasi. Aksi perubahan disimpan melalui API dan database.
+Antarmuka menyediakan daftar produk dengan mode grid/list yang dapat dipilih dari halaman Settings, pencarian nama, penambahan, pengubahan, dan penghapusan dengan konfirmasi. Setiap produk memiliki halaman detail di `/products/:id`; URL yang tidak dikenal dan ID produk yang tidak tersedia menampilkan pesan dengan tautan kembali ke daftar. Aksi perubahan dan detail produk menggunakan API dan database.
